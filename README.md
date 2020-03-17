@@ -2,6 +2,8 @@
 
 Declarative NetworkManager 👌
 
+Shoutout to [@Shou](https://github.com/Shou) as this was fully his idea.
+
 ## Usage
 
 I suggest using `nmtui` or `nm-connection-editor` to write the `*.nmconnection`
