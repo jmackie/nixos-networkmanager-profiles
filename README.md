@@ -11,16 +11,16 @@ file (look in `/etc/NetworkManager/system-connections`) then converting that to 
 attributes like so:
 
 ```nix
-# configuration.nix
+# /etc/nixos/configuration.nix
 
 { ... }: {
 
-  imports = [ 
+  imports = [
     (import (builtins.fetchTarball https://github.com/jmackie/nixos-networkmanager-profiles/archive/master.tar.gz))
   ];
 
-  config.networking.networkmanager.profiles = {
-    "home-wifi" = { 
+  networking.networkmanager.profiles = {
+    "home-wifi" = {
       connection = {
         id = "home-wifi";
         uuid = "<your-uuid-here>";
@@ -50,4 +50,3 @@ attributes like so:
   };
 }
 ```
-
