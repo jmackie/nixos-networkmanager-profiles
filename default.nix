@@ -36,6 +36,10 @@ in {
   options.networking.networkmanager.profiles = mkOption {
     type = types.attrs;
     default = { };
+    description = ''
+    A set of network-manager profiles. Can be derived from any *.nmconnection file.
+    For an example, see https://github.com/jmackie/nixos-networkmanager-profiles/blob/master/master/README.md
+    '';
   };
 
   config = mkIf (attrLength nm.profiles > 0) {
